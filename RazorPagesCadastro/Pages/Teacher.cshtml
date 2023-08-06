@@ -5,14 +5,21 @@
     ViewData["Title"] = "Professor";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Cadastro de Professor</h1>
+<div class="mb3">
+    <h1 class="display-4 text-center">Cadastro de Professor</h1>
 
     <form method="post">
-        <input type="number" name="id" />
-        <input type="text" name="firstName" />
-        <input type="text" name="lastName" />
-        <input type="text" name="subject" />
+        <label class="form-label">Id</label>
+        <input type="number" name="id" class="form-control w-50 p-3"/>
+
+        <label class="form-label">Nome</label>
+        <input type="text" name="firstName" class="form-control w-50 p-3"/>
+
+        <label class="form-label">Sobrenome</label>
+        <input type="text" name="lastName" class="form-control w-50 p-3"/>
+
+        <label class="form-label">Matéria</label>
+        <input type="text" name="subject" class="form-control w-50 p-3"/>
 
         <button type="submit">Adicionar</button>
     </form>
