@@ -1,0 +1,54 @@
+﻿@page
+@using RazorPagesCadastro.Models;
+@model RazorPagesCadastro.Pages.TeacherModel
+@{
+    ViewData["Title"] = "Professor";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Cadastro de Professor</h1>
+
+    <form method="post">
+        <input type="number" name="id" />
+        <input type="text" name="firstName" />
+        <input type="text" name="lastName" />
+        <input type="text" name="subject" />
+
+        <button type="submit">Adicionar</button>
+    </form>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nome</th>
+                <th>Sobrenome</th>
+                <th>Matéria</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            @foreach (Teacher teacher in Model.Teachers)
+            {
+                <tr>
+                    <td>
+                        @teacher.Id
+                    </td>
+
+                    <td>
+                        @teacher.FirstName
+                    </td>
+
+                    <td>
+                        @teacher.LastName
+                    </td>
+
+                    <td>
+                        @teacher.Subject
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
