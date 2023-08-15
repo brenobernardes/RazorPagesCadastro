@@ -6,7 +6,6 @@ namespace RazorPagesCadastro.Models
     {
         [Key]
         public int Id { get; set; }
-        public required string FirstName { get; set; }
-        public string? LastName { get; set; }
+        public required string Name { get; set; }
     }
 }

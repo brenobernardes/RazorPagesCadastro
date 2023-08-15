@@ -10,10 +10,8 @@
 
     <form method="post">
         <label class="form-label">Nome</label>
-        <input type="text" name="firstName" class="form-control w-50 p-3"/>
+        <input type="text" name="name" class="form-control w-50 p-3"/>
 
-        <label class="form-label">Sobrenome</label>
-        <input type="text" name="lastName" class="form-control w-50 p-3"/>
 
         <label class="form-label">Matéria</label>
         <input type="text" name="subject" class="form-control w-50 p-3"/>
@@ -40,11 +38,7 @@
                     </td>
 
                     <td>
-                        @teacher.FirstName
-                    </td>
-
-                    <td>
-                        @teacher.LastName
+                        @teacher.Name
                     </td>
 
                     <td>

@@ -1,11 +1,18 @@
-﻿using RazorPagesCadastro.Models;
+﻿using Microsoft.EntityFrameworkCore;
+using MySql.Data.MySqlClient;
+using RazorPagesCadastro.Context;
+using RazorPagesCadastro.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
 
-builder.Services.AddDbContext<MyDbContext>();
+builder.Services.AddDbContext<MyDbContext>(options =>
+{
+    options.UseMySql(builder.Configuration.GetConnectionString("DefaultConnection"), ServerVersion.AutoDetect(builder.Configuration.GetConnectionString("DefaultConnection")));
+});
+
 
 var app = builder.Build();
 

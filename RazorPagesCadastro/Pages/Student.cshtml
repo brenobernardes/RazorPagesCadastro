@@ -10,10 +10,7 @@
 
     <form method="post">
         <label class="form-label">Nome</label>
-        <input type="text" name="firstName" class="form-control w-50 p-3"/>
-
-        <label class="form-label">Sobrenome</label>
-        <input type="text" name="lastName" class="form-control w-50 p-3"/>
+        <input type="text" name="name" class="form-control w-50 p-3"/>
 
         <Série class="form-label">Série</Série>
         <input type="text" name="grade" class="form-control w-50 p-3"/>
@@ -26,7 +23,6 @@
             <tr>
                 <th>Id</th>
                 <th>Nome</th>
-                <th>Sobrenome</th>
                 <th>Série</th>
             </tr>
         </thead>
@@ -40,11 +36,7 @@
                     </td>
 
                     <td>
-                        @student.FirstName
-                    </td>
-
-                    <td>
-                        @student.LastName
+                        @student.Name
                     </td>
 
                     <td>

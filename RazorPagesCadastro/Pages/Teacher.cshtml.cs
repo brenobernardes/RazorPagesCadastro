@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using RazorPagesCadastro.Models;
+using RazorPagesCadastro.Context;
 
 namespace RazorPagesCadastro.Pages
 {
@@ -22,10 +23,10 @@ namespace RazorPagesCadastro.Pages
             _context = context;
         }
 
-        public void OnGet()
-        {
-            Teachers = _context.Teachers.ToList();
-        }
+        //public void OnGet()
+        //{
+        //    Teachers = _context.Teachers.ToList();
+        //}
 
         public IActionResult OnPost()
         {
