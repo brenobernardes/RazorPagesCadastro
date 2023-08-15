@@ -23,10 +23,10 @@ namespace RazorPagesCadastro.Pages
             _context = context;
         }
 
-        // public void OnGet()
-        // {
-        //    Students = _context.Students.ToList();
-        // }
+        public void OnGet()
+        {
+            Students = _context.Students.ToList();
+        }
 
         public IActionResult OnPost()
         {
